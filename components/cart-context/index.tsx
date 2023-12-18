@@ -19,6 +19,9 @@ export function CartContextProvider({ children }: CartContextProps) {
         if (cartProducts?.length > 0 && typeof window !== "undefined") {
             localStorage.setItem("cart", JSON.stringify(cartProducts));
         }
+        if (cartProducts.length === 0) {
+            return localStorage.removeItem("cart");
+        }
     }, [cartProducts]);
 
     const addProduct = (productId: string) => {
@@ -39,6 +42,7 @@ export function CartContextProvider({ children }: CartContextProps) {
 
     const clearCart = () => {
         setCartProducts([]);
+        localStorage.removeItem("cart");
     };
 
     return (

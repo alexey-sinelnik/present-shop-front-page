@@ -3,7 +3,6 @@ import { Title } from "@/styles/components/products";
 import CenterComponent from "@/components/header/center";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/product";
-import { ProductType } from "@/common/types/product";
 import ProductsGridComponent from "@/components/products-grid";
 
 export default function AllProducts({ products }: any) {
