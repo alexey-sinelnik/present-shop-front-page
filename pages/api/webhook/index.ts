@@ -45,7 +45,3 @@ export default async function handle(req: Request, res: Response) {
 export const config = {
     api: { bodyParser: false }
 };
-
-// enrapt-amazed-bless-hot
-
-// acct_1ONd7PFylXo8sL09
