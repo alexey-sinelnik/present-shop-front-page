@@ -3,8 +3,11 @@ import Link from "next/link";
 
 export const ProductsGrid = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 `;
 
 export const WhiteBox = styled(Link)`
@@ -30,6 +33,7 @@ export const ProductWrapper = styled.div``;
 
 export const ProductInfoBox = styled.div`
     margin-top: 10px;
+    text-align: center;
 `;
 
 export const Title = styled(Link)`
@@ -39,20 +43,23 @@ export const Title = styled(Link)`
     text-decoration: none;
 `;
 
-export const PriceRow = styled.div`
-    display: flex;
-`;
-
 export const PriceBlock = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
     margin-top: 5px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 `;
 
 export const Price = styled.div`
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
+    @media screen and (min-width: 768px) {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
 `;
 
 export const SectionTitle = styled.h2`

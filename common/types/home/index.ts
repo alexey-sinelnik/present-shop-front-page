@@ -1,4 +1,4 @@
-import { ProductType } from "@/common/types/product";
+import { ProductType } from "../products";
 
 export type HomePageProps = {
     featureProduct: ProductType;

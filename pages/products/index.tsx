@@ -1,16 +1,17 @@
 import Header from "@/components/header";
-import { Title } from "@/styles/components/products";
 import CenterComponent from "@/components/header/center";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/product";
 import ProductsGridComponent from "@/components/products-grid";
+import { SectionTitle } from "@/styles/components/new-products";
+import { ProductsGridComponentProps } from "@/common/types/products";
 
-export default function AllProducts({ products }: any) {
+export default function AllProducts({ products }: ProductsGridComponentProps) {
     return (
         <>
             <Header />
             <CenterComponent>
-                <Title>All products</Title>
+                <SectionTitle>All products</SectionTitle>
                 <ProductsGridComponent products={products} />
             </CenterComponent>
         </>

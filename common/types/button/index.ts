@@ -13,3 +13,7 @@ export type StyledPrimaryButtonProps = {
     outline?: boolean | number;
     hover?: boolean | number;
 };
+
+export type MobileMenuButtonProps = {
+    mobile: boolean;
+};

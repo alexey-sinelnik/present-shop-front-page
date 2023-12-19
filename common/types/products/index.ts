@@ -13,3 +13,16 @@ export type ProductType = {
 export type ProductsGridComponentProps = {
     products: ProductType[];
 };
+
+export type ProductComponentProps = {
+    product: ProductType;
+};
+
+export type ProductImagesProps = {
+    images: string[];
+    alt: string;
+};
+
+export type ActiveImageProps = {
+    active: boolean;
+};

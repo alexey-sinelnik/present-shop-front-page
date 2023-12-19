@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import {
-    Box,
     CenteredBox,
     CityHolder,
     ColumnsWrapper,
@@ -13,9 +12,10 @@ import { StyledPrimaryButton } from "@/styles/components/button";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "@/components/cart-context";
 import axios from "axios";
-import { ProductType } from "@/common/types/product";
+import { ProductType } from "@/common/types/products";
 import TableComponent from "@/components/table";
 import InputComponent from "@/components/input";
+import { Box } from "@/styles/components";
 
 export default function CartComponent() {
     const [products, setProducts] = useState<ProductType[]>([]);

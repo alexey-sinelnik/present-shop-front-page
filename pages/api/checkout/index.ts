@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/product";
 import { Order } from "@/models/order";
-import { ProductType } from "@/common/types/product";
+import { ProductType } from "../../../common/types/products";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export default async function handle(req: Request, res: Response) {

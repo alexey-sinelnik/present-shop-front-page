@@ -37,7 +37,7 @@ export default function FeaturedProductComponent({
                                     size="l"
                                     white={1}
                                     outline={1}
-                                    link={`products/${product._id}`}
+                                    link={`product/${product._id}`}
                                 >
                                     Read more
                                 </ButtonLink>

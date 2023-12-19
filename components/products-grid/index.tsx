@@ -1,7 +1,7 @@
 import {
     ProductsGridComponentProps,
     ProductType
-} from "@/common/types/product";
+} from "@/common/types/products";
 import ProductBoxComponent from "@/components/product-box";
 import { ProductsGrid } from "@/styles/components/new-products";
 
