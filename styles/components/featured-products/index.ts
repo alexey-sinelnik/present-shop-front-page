@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const Background = styled.div`
-    background-color: #222;
+    background-color: rgb(35 51 60);
     color: #fff;
     padding: 50px 0;
 `;
