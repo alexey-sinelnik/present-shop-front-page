@@ -2,7 +2,7 @@ import CenterComponent from "@/components/header/center";
 import Header from "@/components/header";
 import { SectionTitle } from "@/styles/components/new-products";
 import { mongooseConnect } from "@/lib/mongoose";
-import { Product } from "@/models/product";
+import { Product } from "@/models/products";
 import { ProductComponentProps } from "@/common/types/products";
 import {
     ColumnsWrapper,

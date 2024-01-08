@@ -1,7 +1,7 @@
 import Header from "@/components/header";
 import FeaturedProductComponent from "../components/featured-products";
 import { mongooseConnect } from "@/lib/mongoose";
-import { Product } from "@/models/product";
+import { Product } from "@/models/products";
 import { HomePageProps } from "@/common/types/home";
 import NewProductsComponent from "@/components/new-products";
 

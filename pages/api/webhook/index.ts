@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 import { buffer } from "micro";
 import { StripeEventType } from "@/common/types/orders";
-import { Order } from "@/models/order";
+import { Order } from "@/models/orders";
 
 const endpointSecret =
     "whsec_34e60445c8d7bf5379bac7084dc9071c0737bb695f09868195b8528c4c0af563";

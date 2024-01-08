@@ -1,10 +1,14 @@
 import Header from "@/components/header";
 import CenterComponent from "@/components/header/center";
 import { mongooseConnect } from "@/lib/mongoose";
-import { Product } from "@/models/product";
+import { Product } from "@/models/products";
 import ProductsGridComponent from "@/components/products-grid";
 import { SectionTitle } from "@/styles/components/new-products";
-import { ProductsGridComponentProps } from "@/common/types/products";
+import {
+    ProductsDataType,
+    ProductsGridComponentProps,
+    ProductType
+} from "@/common/types/products";
 
 export default function AllProducts({ products }: ProductsGridComponentProps) {
     return (
@@ -18,9 +22,9 @@ export default function AllProducts({ products }: ProductsGridComponentProps) {
     );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(): Promise<ProductsDataType> {
     await mongooseConnect();
-    const products = await Product.find({}, null, {
+    const products: ProductType[] = await Product.find({}, null, {
         sort: { _id: -1 },
         limit: 24
     });

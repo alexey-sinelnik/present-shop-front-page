@@ -1,11 +1,10 @@
 import { mongooseConnect } from "@/lib/mongoose";
-import { Product } from "@/models/product";
+import { Request, Response } from "express";
+import { Product } from "@/models/products";
 
-export default async function handle(
-    req: { body: { ids: string[] } },
-    res: { json: (arg0: any[]) => void }
-) {
+export default async function handle(req: Request, res: Response) {
     await mongooseConnect();
     const { ids } = req.body;
+
     res.json(await Product.find({ _id: ids }));
 }

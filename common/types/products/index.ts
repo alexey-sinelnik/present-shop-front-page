@@ -26,3 +26,7 @@ export type ProductImagesProps = {
 export type ActiveImageProps = {
     active: boolean;
 };
+
+export type ProductsDataType = {
+    props: ProductsGridComponentProps;
+};
